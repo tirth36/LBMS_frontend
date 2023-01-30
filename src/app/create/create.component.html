@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<body>
+    <main>
+        <form #createform="ngForm" [ngClass]="'form_class'">
+            <div [ngClass]="'form_div'">
+                <label>Book name:</label>
+                <input type="text" [(ngModel)]="book_name" name="book_name" [ngClass]="'field_class'" placeholder="Enter your book name">
+                <label>Book author:</label>
+                <input type="text" [(ngModel)]="book_author" name="book_author" [ngClass]="'field_class'" placeholder="Enter book author's name">
+                <label>Book price:</label>
+                <input type="number" [(ngModel)]="book_price" name="book_price" [ngClass]="'field_class'" placeholder="Enter book price">
+
+                <button type="submit" *ngIf="!getparamid" (click)="usersubmit(createform)" [ngClass]="'submit_class'"> submit </button>
+                <button type="submit" *ngIf="getparamid" (click)="updatedata(createform)" [ngClass]="'submit_class'"> update </button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p> Made by Tirth Suthar </p>
+    </footer>
+  </body>
+<router-outlet></router-outlet>

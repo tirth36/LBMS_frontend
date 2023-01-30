@@ -1,0 +1,22 @@
+<body>
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+    <main>
+        <form #loginform="ngForm" (submit)="checkvalue()" [ngClass]="'form_class'">
+            <div [ngClass]="'form_div'">
+                <label>Email:</label>
+                <input type="text" [(ngModel)]="username" name="username" [ngClass]="'field_class'" placeholder="Enter your email">
+                <label>Password:</label>
+                <input type="password" [(ngModel)]="password" name="password" [ngClass]="'field_class'" placeholder="Enter password">
+                <button type="submit" [ngClass]="'submit_class'"> submit </button>
+            </div>
+            <div [ngClass]="'info_div'">
+                <p>New User? <a routerLink="/signup" > Register here </a></p>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p> Made by Tirth Suthar </p>
+    </footer>
+  </body>

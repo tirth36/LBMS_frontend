@@ -1,0 +1,25 @@
+<body>
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+    <main>
+        <form #signup="ngForm" (ngSubmit)="addvalue(signup)" [ngClass]="'form_class'">
+            <div [ngClass]="'form_div'">
+                <label>Email:</label>
+                <input type="text" [(ngModel)]="username" name="username" [ngClass]="'field_class'" placeholder="Enter your email">
+                <label>Password:</label>
+                <input type="password" [(ngModel)]="password_txt" name="password_txt" [ngClass]="'field_class'" placeholder="Enter password">
+                <label>Confirm Password:</label>
+                <input type="password" [(ngModel)]="password_txt1" name="password_txt1" [ngClass]="'field_class'" placeholder="Confirm password">
+                <button type="submit" [ngClass]="'submit_class'"> submit </button>
+            </div>
+            <div [ngClass]="'info_div'">
+                <p>Already User? <a routerLink="/login" > Login </a></p>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p> Made by Tirth Suthar </p>
+    </footer>
+  </body>
+<router-outlet></router-outlet>

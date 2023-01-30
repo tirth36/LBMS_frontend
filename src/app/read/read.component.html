@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<table id="customers">
+    <tr>
+      <th> ID </th>
+      <th> Book name</th>
+      <th> Book author </th>
+      <th> book price </th>
+      <th> delete </th>
+      <th> Edit </th>
+    </tr>
+    <tr *ngFor="let data of readdata">
+        <td> {{data.id}} </td>
+        <td>{{data.book_name}}</td>
+        <td>{{data.book_author}}</td>
+        <td>{{data.book_price}}</td>
+        <td> <button class="submit_class" (click)="deleteid(data.id)"> Delete </button> </td>
+        <td> <button class="submit_class"> <a routerLink="/create/{{data.id}}">Edit</a> </button> </td>
+    </tr>
+  </table>
+  <router-outlet></router-outlet>
